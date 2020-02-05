@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>DOM Starter Kit</title>
+        <style>
+            html {
+                color: white;
+            }
+            body {
+                font-size: 24px;
+                background-color: blue;
+            }
+            form {
+
+                border: solid 1px black;
+                padding: 8px;
+                margin-bottom: 10px;
+            }
+            h1 {
+                float: center;
+                margin-top: 4px;
+            }
+
+    </style>
+    </head>
+
+    <body>
+        <br>
+        <form>
+            <label>Name:
+                <input type="text" id="nameInput" value="" />
+            </label>
+            <label>Age:
+                <input type="text" id="ageInput" value="" />
+            </label>
+            <label>Home Town:
+                <input type="text" id="cityInput" value="" />
+            </label>
+            <label>Years Fighting:
+                <input type="text" id="fightingYearsInput" value="" />
+            </label>
+            <button type="button" id="clickMe">Submit</button>
+        </form>
+        <h1>Welcom to Fight Force 2020</h1> 
+        <p>
+            Here are your player's attributes:<br>
+            Name: <span id="name">_____</span><br>
+            Age: <span id="age">_____</span><br>
+            Power: 99<br>
+            Speed: 87<br>
+            Stamina: 80<br>
+            And now your champion hailing from <span id="city">_____</span>
+            and fighting for over <span id="fightingYears">_____</span>
+            years. With 30 wins all by way of TKO... Lets get ready to rumble!
+        </p>
+    </body>
+    <script>
+        const myButton = document.getElementById("clickMe");
+        const name = document.getElementById("name");
+        const nameInput = document.getElementById("nameInput");
+        const age = document.getElementById("age");
+        const ageInput = document.getElementById("ageInput");
+        const city = document.getElementById("city");
+        const cityInput = document.getElementById("cityInput");
+        const fightingYears = document.getElementById("fightingYears");
+        const fightingYearsInput = document.getElementById("fightingYearsInput");
+        myButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            name.innerHTML = nameInput.value;
+            age.innerHTML = ageInput.value;
+            city.innerHTML = cityInput.value;
+            fightingYears.innerHTML = fightingYearsInput.value;
+
+        });
+    </script>
+</html>
