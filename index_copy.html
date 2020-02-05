@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>MadLib 2020</title>
+        <style>
+
+        body {
+            display: grid;
+            font-size: 24px;
+            color: white;
+            background-color: white;
+        }
+
+        form {
+            display: inline-block;
+            padding: 15px;
+            margin: 0;
+            height: 30px;
+            background: black;
+        }
+        
+        h1 {
+            display: inline;
+            text
+            height: 500px;
+            margin: 0;
+        }
+
+        h3 {
+            border: #35434f solid 1px;
+            padding: 16px;
+        }  
+
+        span {
+            background: grey;
+            color: black;
+
+        }
+
+        label {
+            padding: 4px;
+        }
+
+        .button1 {
+            display: inline-block;
+            padding: 8px;
+        }
+
+        .largeText {
+            text-align: center;
+            font-size: 32px;
+            margin: 0;
+            padding: 8px;
+            background: #527da4;
+        }
+
+        .playerInfo {
+            display: flex;
+            width: 100%;
+            border: black solid 1px;
+            background: black;
+        }
+
+        .container1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #35434f;
+        }
+
+        .container2 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #527da4;
+        }
+
+        .container3 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #35434f;
+        }
+
+        .container4{
+            border: grey solid 24px;
+        }
+
+    </style>
+    </head>
+
+    <body>
+        <br>  
+        <div class="container4">        
+            <div class="container1">
+                <h1>Welcome to Madlibs 2020</h1>
+            </div>
+            <form class="container2">
+                <label>Name:
+                    <input type="text" id="nameInput" value="" />
+                </label>
+                <label>Age:
+                    <input type="text" id="ageInput" value="" />
+                </label>
+                <label>Home Town:
+                    <input type="text" id="cityInput" value="" />
+                </label>
+                <label>Years Playing:
+                    <input type="text" id="fightingYearsInput" value="" />
+                </label>  
+                <div class="button1">            
+                    <button type="button" id="clickMe">Submit</button>
+                </div>          
+            </form>
+            <div class="container3">        
+                <h3>
+                    Here are your player's attributes:<br><br>
+                    Name: <span id="name">_____</span><br><br>
+                    Age: <span id="age">_____</span><br><br>
+                    Power: 99<br><br>
+                    Speed: 87<br><br>
+                    Stamina: 80<br><br>
+                </h3>
+            </div>
+
+            <p class="largeText">
+                And now your champion hailing from <span id="city">_____</span>
+                and playing for over <span id="fightingYears">_____</span>
+                years, with 30 wins... Lets get ready to Madlib!
+            </p>
+        </div>      
+
+    </body>
+    <script>
+        const myButton = document.getElementById("clickMe");
+        const name = document.getElementById("name");
+        const nameInput = document.getElementById("nameInput");
+        const age = document.getElementById("age");
+        const ageInput = document.getElementById("ageInput");
+        const city = document.getElementById("city");
+        const cityInput = document.getElementById("cityInput");
+        const fightingYears = document.getElementById("fightingYears");
+        const fightingYearsInput = document.getElementById("fightingYearsInput");
+        myButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            name.innerHTML = nameInput.value;
+            age.innerHTML = ageInput.value;
+            city.innerHTML = cityInput.value;
+            fightingYears.innerHTML = fightingYearsInput.value;
+
+        });
+    </script>
+</html>
