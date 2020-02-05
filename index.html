@@ -5,58 +5,136 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>DOM Starter Kit</title>
+        <title>Fight Club</title>
         <style>
-            html {
-                color: white;
-            }
-            body {
-                font-size: 24px;
-                background-color: blue;
-            }
-            form {
+        body {
+            display: grid;
+            font-size: 24px;
+            color: white;
+            background-color: white;
+        }
+        form {
+            display: inline-block;
+            /* border: solid 1px red; */
+            padding: 15px;
+            margin: 0;
+            height: 30px;
+            background: black;
+        }
+        
+        h1 {
+            display: inline;
+            text
+            height: 500px;
+            /* background: red; */
+            margin: 0;
+        }
+        /* div {
+            display: inline-block;
+            border: red solid 1px;
+            background: black;
+            margin: 0;
+        } */
+        h3 {
+            border: #35434f solid 1px;
+            padding: 16px;
+            /* float: center; */
+        }        
+        span {
+            background: grey;
+            color: black;
 
-                border: solid 1px black;
-                padding: 8px;
-                margin-bottom: 10px;
-            }
-            h1 {
-                float: center;
-                margin-top: 4px;
-            }
+        }
+        label {
+            padding: 4px;
+        }
+        .button1 {
+            display: inline-block;
+            padding: 8px;
+            /* border: red solid 3px; */
+        }
+        .largeText {
+            text-align: center;
+            font-size: 32px;
+            margin: 0;
+            /* border: red solid 1px; */
+            padding: 8px;
+            background: #527da4;
+        }
+        .playerInfo {
+            display: flex;
+            width: 100%;
+            border: black solid 1px;
+            background: black;
+        }
+        .container1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #35434f;
+        }
+        .container2 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #527da4;
+        }
+        .container3 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #35434f;
+        }
+        .container4{
+            border: grey solid 24px;
+        }
+
 
     </style>
     </head>
 
     <body>
-        <br>
-        <form>
+        <br>  
+        <div class="container4">        
+            <div class="container1">
+            <h1>Welcome to Fight Club 2020</h1>
+        </div>
+        <form class="container2">
             <label>Name:
                 <input type="text" id="nameInput" value="" />
             </label>
-            <label>Age:
+            <label> Age:
                 <input type="text" id="ageInput" value="" />
             </label>
-            <label>Home Town:
+            <label> Home Town:
                 <input type="text" id="cityInput" value="" />
             </label>
-            <label>Years Fighting:
+            <label> Years Fighting:
                 <input type="text" id="fightingYearsInput" value="" />
-            </label>
-            <button type="button" id="clickMe">Submit</button>
+            </label>  
+                <div class="button1">            
+                    <button type="button" id="clickMe">Submit</button>
+                </div>          
         </form>
-        <h1>Welcom to Fight Force 2020</h1> 
-        <p>
-            Here are your player's attributes:<br>
-            Name: <span id="name">_____</span><br>
-            Age: <span id="age">_____</span><br>
-            Power: 99<br>
-            Speed: 87<br>
-            Stamina: 80<br>
+
+        <div class="container3">        
+            <h3>Here are your player's attributes:<br><br>
+            Name: <span id="name">_____</span><br><br>
+            Age: <span id="age">_____</span><br><br>
+            Power: 99<br><br>
+            Speed: 87<br><br>
+            Stamina: 80<br><br>
+            </h3>
+        </div>
+
+            
+
+        <p class="largeText">
             And now your champion hailing from <span id="city">_____</span>
             and fighting for over <span id="fightingYears">_____</span>
-            years. With 30 wins all by way of TKO... Lets get ready to rumble!
-        </p>
+            years, with 30 wins, all by way of TKO... Lets get ready to rumble!
+        </p></div>      
+
     </body>
     <script>
         const myButton = document.getElementById("clickMe");
